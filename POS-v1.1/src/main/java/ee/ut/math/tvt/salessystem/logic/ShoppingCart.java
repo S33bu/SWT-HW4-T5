@@ -20,12 +20,12 @@ public class ShoppingCart {
      */
     public void addItem(SoldItem item) {
         // TODO In case such stockItem already exists increase the quantity of the existing stock
-        //for (SoldItem existingItem: items) {
-        //    if (existingItem.getId().equals(item.getId())) {
-        //        existingItem.setQuantity(existingItem.getQuantity() + item.getQuantity());
-        //        return;
-        //    }
-        //}
+        for (SoldItem existingItem: items) {
+            if (existingItem.getId().equals(item.getId())) {
+                existingItem.setQuantity(existingItem.getQuantity() + item.getQuantity());
+                return;
+            }
+        }
 
         items.add(item);
         //log.debug("Added " + item.getName() + " quantity of " + item.getQuantity());
